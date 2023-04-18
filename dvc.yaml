@@ -1,0 +1,17 @@
+stages:
+  prepare_data:
+    cmd: /usr/bin/python3 prepare.py
+    deps:
+      - data/raw
+      - prepare.py
+    outs:
+      - data/prepared/train.csv
+      - data/prepared/test.csv
+  train_model:
+    cmd: /usr/bin/python3 train.py
+    deps:
+      - data/prepared/train.csv
+      - train.py
+    outs:
+      - model/model.joblib
+      - model/best_params.json
