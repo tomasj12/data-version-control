@@ -2,7 +2,7 @@ stages:
   prepare_data:
     cmd: /usr/bin/python3 prepare.py
     deps:
-    - data/raw
+    - data/raw/
     - prepare.py
     outs:
     - data/prepared/train.csv
