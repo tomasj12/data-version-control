@@ -4,9 +4,9 @@ stages:
     cmd: /usr/bin/python3 prepare.py
     deps:
     - path: data/raw
-      md5: ddc99140238f5f0d770593a94917d83d.dir
-      size: 29564409
-      nfiles: 3681
+      md5: f16bd62d7b28a4be4b7d4222552159f7.dir
+      size: 29340734
+      nfiles: 3656
     - path: prepare.py
       md5: 0246553f04f0ff6cc997c9df3f8581ca
       size: 1286
