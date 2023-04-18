@@ -4,32 +4,32 @@ stages:
     cmd: /usr/bin/python3 prepare.py
     deps:
     - path: data/raw
-      md5: f16bd62d7b28a4be4b7d4222552159f7.dir
-      size: 29340734
-      nfiles: 3656
+      md5: e4f616bf22b763b53f84492720fe04ca.dir
+      size: 21201476
+      nfiles: 2666
     - path: prepare.py
       md5: 0246553f04f0ff6cc997c9df3f8581ca
       size: 1286
     outs:
     - path: data/prepared/test.csv
-      md5: cc141a3c55fedbf6f6c6adfd266cd0fd
-      size: 51708
+      md5: e79818d6f3c716a343054d994e13f147
+      size: 16
     - path: data/prepared/train.csv
-      md5: 0b1f5064eb03a284669eaa9d7e93d09d
-      size: 260846
+      md5: 4302930eaa9065e6613e9944082d1faa
+      size: 232715
   train_model:
     cmd: /usr/bin/python3 train.py
     deps:
     - path: data/prepared/train.csv
-      md5: 0b1f5064eb03a284669eaa9d7e93d09d
-      size: 260846
+      md5: 4302930eaa9065e6613e9944082d1faa
+      size: 232715
     - path: train.py
-      md5: 05f2c6b9720ef82e157043f59e9d5037
+      md5: 59bdea04f2c8b527dc06e6b8d7f6a8c5
       size: 1495
     outs:
     - path: model/best_params.json
-      md5: 91ca632e9e65cb28adafd0082a2f6e68
+      md5: d4c66a6001817b65afa351314108559f
       size: 401
     - path: model/model.joblib
-      md5: 78e043f3cb806369f46cdc82fd60f006
+      md5: b6f1a308e382f5149a45da1f9ffea513
       size: 241148
